@@ -50,7 +50,6 @@ namespace CafeShopManagement
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -71,7 +70,6 @@ namespace CafeShopManagement
             this.label2.Size = new System.Drawing.Size(85, 24);
             this.label2.TabIndex = 2;
             this.label2.Text = "password";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox1
             // 
@@ -80,7 +78,6 @@ namespace CafeShopManagement
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(266, 30);
             this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -89,7 +86,6 @@ namespace CafeShopManagement
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(266, 27);
             this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button1
             // 
@@ -114,7 +110,6 @@ namespace CafeShopManagement
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Customer_Login";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Form1
             // 
@@ -132,7 +127,6 @@ namespace CafeShopManagement
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
