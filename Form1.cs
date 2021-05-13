@@ -40,5 +40,12 @@ namespace CafeShopManagement
                 MessageBox.Show("Invalid login details!");
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Dashboard ds = new Dashboard("Guest");
+            ds.Show();
+            this.Hide();
+        }
     }
 }

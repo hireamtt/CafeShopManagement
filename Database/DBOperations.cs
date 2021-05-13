@@ -16,7 +16,7 @@ namespace CafeShopManagement.Database
         {
             try
             {
-                dbCon = new SqlConnection(@"Data Source=DESKTOP-D7D5MT3;Initial Catalog=testdbase;User ID=sa;Password=ramya@123");
+                dbCon = new SqlConnection(@"Data Source=UTS-RAMYASHREE;Initial Catalog=testdbase;User ID=sa;Password=gts@123");
                 return true;
             }
             catch (Exception)
