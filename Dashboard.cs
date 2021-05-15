@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CafeShopManagement.AllUserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,5 +55,18 @@ namespace CafeShopManagement
             this.Hide();
             fm.Show();
         }
+
+        private void btnAddItem_Click(object sender, EventArgs e)
+        {
+            if (!panel2.Controls.Contains(UC_AddItems.Instance))
+            {
+                panel2.Controls.Add(UC_AddItems.Instance);
+                UC_AddItems.Instance.Dock = DockStyle.Fill;
+                UC_AddItems.Instance.BringToFront();
+            }
+            else
+                UC_AddItems.Instance.BringToFront();
+        }
+        
     }
 }
