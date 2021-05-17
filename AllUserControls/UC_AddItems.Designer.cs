@@ -54,7 +54,7 @@ namespace CafeShopManagement.AllUserControls
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(179, 151);
+            this.label2.Location = new System.Drawing.Point(179, 122);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 26);
             this.label2.TabIndex = 1;
@@ -64,17 +64,18 @@ namespace CafeShopManagement.AllUserControls
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(179, 250);
+            this.label3.Location = new System.Drawing.Point(179, 220);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 26);
             this.label3.TabIndex = 2;
             this.label3.Text = "Item Name";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(179, 351);
+            this.label4.Location = new System.Drawing.Point(179, 307);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 26);
             this.label4.TabIndex = 3;
@@ -84,12 +85,13 @@ namespace CafeShopManagement.AllUserControls
             // 
             this.btnAddItem.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnAddItem.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAddItem.Location = new System.Drawing.Point(264, 451);
+            this.btnAddItem.Location = new System.Drawing.Point(258, 406);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.Size = new System.Drawing.Size(118, 33);
             this.btnAddItem.TabIndex = 4;
             this.btnAddItem.Text = "Add Item";
             this.btnAddItem.UseVisualStyleBackColor = false;
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // txtCategory
             // 
@@ -100,7 +102,7 @@ namespace CafeShopManagement.AllUserControls
             "Soft drinks",
             "Cold Coffee",
             "Hot cofee"});
-            this.txtCategory.Location = new System.Drawing.Point(179, 183);
+            this.txtCategory.Location = new System.Drawing.Point(179, 154);
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(290, 33);
             this.txtCategory.TabIndex = 5;
@@ -108,15 +110,16 @@ namespace CafeShopManagement.AllUserControls
             // txtItemName
             // 
             this.txtItemName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtItemName.Location = new System.Drawing.Point(179, 279);
+            this.txtItemName.Location = new System.Drawing.Point(179, 249);
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.Size = new System.Drawing.Size(290, 33);
             this.txtItemName.TabIndex = 6;
+            this.txtItemName.TextChanged += new System.EventHandler(this.txtItemName_TextChanged);
             // 
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPrice.Location = new System.Drawing.Point(179, 389);
+            this.txtPrice.Location = new System.Drawing.Point(179, 347);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(290, 33);
             this.txtPrice.TabIndex = 7;
@@ -144,6 +147,7 @@ namespace CafeShopManagement.AllUserControls
             this.Name = "UC_AddItems";
             this.Size = new System.Drawing.Size(781, 514);
             this.Load += new System.EventHandler(this.UC_AddItems_Load);
+            this.Leave += new System.EventHandler(this.UC_AddItems_Leave);
             this.ResumeLayout(false);
             this.PerformLayout();
 

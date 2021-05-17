@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace CafeShopManagement.Database
 {
@@ -58,6 +59,27 @@ namespace CafeShopManagement.Database
             else
             {
                 return false;
+            }
+        }
+        public void setData(String query)
+        {
+            if(DBConnection())
+            {
+                try
+                {
+                    cmdStr.Connection = dbCon;
+                    dbCon.Open();
+                    cmdStr.CommandText = query;
+                    cmdStr.ExecuteNonQuery();
+                    dbCon.Close();
+                    MessageBox.Show("Data processed successfully","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+                catch(Exception)
+                {
+                    MessageBox.Show("Data could not be processed ", "Unsuccessfull", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
             }
         }
     }
