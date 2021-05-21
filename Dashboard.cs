@@ -36,6 +36,15 @@ namespace CafeShopManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+                if (!panel2.Controls.Contains(UC_PlaceOrder.Instance))
+            {
+                panel2.Controls.Add(UC_PlaceOrder.Instance);
+                UC_PlaceOrder.Instance.Dock = DockStyle.Fill;
+                UC_PlaceOrder.Instance.BringToFront();
+            }
+            else
+                UC_PlaceOrder.Instance.BringToFront();
 
         }
 
@@ -67,6 +76,28 @@ namespace CafeShopManagement
             else
                 UC_AddItems.Instance.BringToFront();
         }
-        
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdateItem_Click(object sender, EventArgs e)
+        {
+            if (!panel2.Controls.Contains(UC_UpdateItems.Instance))
+            {
+                panel2.Controls.Add(UC_UpdateItems.Instance);
+                UC_UpdateItems.Instance.Dock = DockStyle.Fill;
+                UC_UpdateItems.Instance.BringToFront();
+            }
+            else
+                UC_UpdateItems.Instance.BringToFront();
+
+        }
     }
 }

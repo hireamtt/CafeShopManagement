@@ -4,6 +4,8 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
+using System.Threading.Tasks;
+using System.Linq;
 
 namespace CafeShopManagement.Database
 {
@@ -82,5 +84,40 @@ namespace CafeShopManagement.Database
 
             }
         }
+        public DataSet GetData(string query)
+        {
+            DataSet ds = new DataSet();
+
+            if (DBConnection())
+            {
+                //DataSet ds = new DataSet();
+
+                try
+                {
+                    dbCon.Open();
+
+                    cmdStr.Connection = dbCon;
+                    cmdStr.CommandText = query;
+
+                    cmdRes = new SqlDataAdapter(cmdStr);
+                    cmdRes.Fill(ds);
+
+                    dbCon.Close();
+                    return ds;
+                }
+                catch (Exception)
+                {
+                    throw;
+                } 
+            }
+            else
+            {
+                return ds;
+            }
+        
+        }
+
+
+
     }
 }
