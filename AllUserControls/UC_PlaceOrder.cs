@@ -38,7 +38,7 @@ namespace CafeShopManagement.AllUserControls
 
         private void comboCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            textSearch.Clear();
             String category = comboCategory.Text;
             query = "select name from items where category='" + category + "'";
             showItemList(query);
@@ -140,6 +140,11 @@ namespace CafeShopManagement.AllUserControls
             }
             total -= amt;
             labelTotalAmount.Text = "Rs. " + total;
+
+        }
+
+        private void UC_PlaceOrder_Load(object sender, EventArgs e)
+        {
 
         }
 

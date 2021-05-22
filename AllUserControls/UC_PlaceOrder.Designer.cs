@@ -157,6 +157,7 @@ namespace CafeShopManagement.AllUserControls
             // 
             this.textItemName.Location = new System.Drawing.Point(29, 39);
             this.textItemName.Name = "textItemName";
+            this.textItemName.ReadOnly = true;
             this.textItemName.Size = new System.Drawing.Size(135, 23);
             this.textItemName.TabIndex = 9;
             // 
@@ -164,6 +165,7 @@ namespace CafeShopManagement.AllUserControls
             // 
             this.textPrice.Location = new System.Drawing.Point(29, 117);
             this.textPrice.Name = "textPrice";
+            this.textPrice.ReadOnly = true;
             this.textPrice.Size = new System.Drawing.Size(131, 23);
             this.textPrice.TabIndex = 10;
             // 
@@ -171,6 +173,7 @@ namespace CafeShopManagement.AllUserControls
             // 
             this.textTotal.Location = new System.Drawing.Point(245, 117);
             this.textTotal.Name = "textTotal";
+            this.textTotal.ReadOnly = true;
             this.textTotal.Size = new System.Drawing.Size(131, 23);
             this.textTotal.TabIndex = 11;
             // 
@@ -223,6 +226,7 @@ namespace CafeShopManagement.AllUserControls
             this.Column4});
             this.dataGridView1.Location = new System.Drawing.Point(185, 251);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 100;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(491, 133);
@@ -233,21 +237,25 @@ namespace CafeShopManagement.AllUserControls
             // 
             this.Column1.HeaderText = "Item Name";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Unit Price";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Quantity";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Price";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // btnRemove
             // 
@@ -313,6 +321,7 @@ namespace CafeShopManagement.AllUserControls
             this.Controls.Add(this.label1);
             this.Name = "UC_PlaceOrder";
             this.Size = new System.Drawing.Size(781, 514);
+            this.Load += new System.EventHandler(this.UC_PlaceOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantity)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

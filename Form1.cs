@@ -44,8 +44,9 @@ namespace CafeShopManagement
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Dashboard ds = new Dashboard("Guest");
-            ds.Show();
+            
             this.Hide();
+            ds.Show();
         }
     }
 }
